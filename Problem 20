@@ -1,0 +1,13 @@
+sum = 1 
+for i in range(1,100):
+    sum = sum*i
+    
+print sum
+real_sum = 0
+a = str(sum)
+for i in range(len((a))):
+    real_sum +=int(a[i])
+print real_sum
+    
+    
+    

@@ -1,0 +1,72 @@
+def one_digit(int):
+    if int ==0:
+        return 0
+    if int ==1 or int==2 or int==6:
+        return 3
+    if int ==3 or int==7 or int ==8:
+        return 5
+    if int == 4 or int ==5 or int==9:
+        return 4
+def two_digit(int):
+    if int==0:
+        return 0
+    if int==6:
+        return 3   
+    if int==2 or int==3 or int==8:
+        return 6
+    if int ==4 or int==5 or int==9:
+        return 5
+    if int==7:
+        return 7
+
+def three_digit(int):
+    if int==0:
+        return 0
+    if int ==1 or int==2 or int==6:
+        return 10
+    if int ==3 or int==7 or int ==8:
+        return 12
+    if int == 4 or int ==5 or int==9:
+        return 11
+    
+def four_digit(int):
+    return 11
+    
+    
+def tens(int):
+    if(int==10 or int ==1 or int==0):
+        return 3
+    if(int==11 or int==12 or int==1 or int==2):
+        return 6
+    if(int==13 or int==14 or int==18 or int==19 or int ==3 or int ==4 or int==8 or int==9):
+        return 8
+    if(int==15 or int==16 or int==5 or int==6):
+        return 7
+    if(int==17 or int==7):
+        return 9
+    
+    
+sum = 0
+for i in range(1,300):
+    if i==100:
+        sum +=7
+        
+    word = str(i)
+    if len(word)==1:       
+        sum += one_digit(int(i))
+   
+    if (len(word)==2 and word[0]=='1'):
+        sum +=tens(i)
+    
+    if (len(word)==2 and word[0]!='1'):
+        sum += one_digit(int(word[1]))+two_digit(int(word[0]))
+    if (len(word)==3 and word[1]=="1"):
+        sum+= three_digit(int(word[0]))+tens(int(word[2]))
+    if (len(word)==3):
+        sum += one_digit(int(word[2]))+tens(int(word[1]))+three_digit(int(word[0]))+10 
+        #10 - hundred and 
+        
+        
+print sum
+                             
+   

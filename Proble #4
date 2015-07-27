@@ -1,0 +1,29 @@
+pal = 0
+for i in range(100, 1000):
+    for n in range(100, 1000):
+        a = str(i*n)
+        if len(a) == 1:
+            if i*n > pal:
+                pal = i*n
+        if len(a) == 2:
+            if a[0]==a[1]:
+                if i*n>pal:
+                    pal = i*n
+        if len(a) == 3:
+            if a[0] == a[1]:
+                if i*n>pal:
+                    pal = i*n
+        if len(a) == 4:
+            if a[0] == a[3] and a[1] == a[2]:
+                if i*n>pal:
+                    pal = i*n
+        if len(a) == 5:
+            if a[0] == a[4] and a[1] == a[3]:
+                if i*n>pal:
+                    pal = i*n
+        if len(a) ==6:
+            if a[0] == a[5] and a[1]==a[4] and a[2]==a[3]:
+                if i*n>pal:
+                    pal = i*n
+print (pal)
+ 

@@ -1,9 +1,10 @@
 #Problem 7
 import math
 import time
-startTime = time.time()
+
 
 prime = int(input("What prime number do you wish to find? "))
+startTime = time.time()
 a = [2,3]
 i = 3
 
@@ -23,5 +24,4 @@ while (len(a)<prime+1):
 print ("The %d prime number is %d" % (prime, (a[prime-1])))
 
 print ("The search took %d seconds" %(time.time()-startTime))                                                 
-        
-#The time seems a bit off, the it takes much less than stated. Any help would be great!
+

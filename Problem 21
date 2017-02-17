@@ -1,0 +1,19 @@
+#problem 21
+
+def divisors(num):
+    sumTotal = 0
+    for i in range(1,(round(num/2)+1)):
+        if num%i==0:
+            sumTotal +=i
+
+    return sumTotal
+
+specialNum = 0
+
+for i in range(1,10001):
+    test = divisors(i)
+    test1 = divisors (test)
+    if(i==test1 and test!=i):
+        specialNum += i
+    
+print (specialNum)

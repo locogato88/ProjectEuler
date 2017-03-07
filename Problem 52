@@ -1,0 +1,25 @@
+
+import time
+startTime = time.time()
+def convert(int):
+    return sorted(str(int))
+
+winner = 0
+
+for i in range(100000, 10000000):
+    a = convert(i)
+    b = convert(i*2)
+    c = convert(i*3)
+    d = convert(i*4)
+    e = convert(i*5)
+    f = convert(i*6)
+    if(len(a)!=len(b) or len(a) !=len(c) or len(a) != len(d) or len(a) != len(e) or len(a)!=len(f)):
+        continue
+    elif(f == a):
+        if(b == c and c==d and d==e and e==f and a==b):
+            print (i)
+            break
+    else:
+        continue
+    
+print ("The problem took %d seconds to solve" %(time.time()-startTime)) 

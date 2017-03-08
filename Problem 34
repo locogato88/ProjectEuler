@@ -1,0 +1,15 @@
+import math
+
+def numBreak(int):
+    return(str(int))
+maxSum = 0
+for i in range(145, 100000):
+    a = numBreak(i)
+    sum = 0
+    for j in range(len(a)):
+        sum += math.factorial(int(a[j]))
+    
+    if sum == i:
+        maxSum += int(a)
+
+print (maxSum)
